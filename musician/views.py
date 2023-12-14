@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from . import forms
+from . import models
 # Create your views here.
 
 def add_musician(request):
@@ -12,3 +13,8 @@ def add_musician(request):
         form = forms.MusicianForm()
     return render(request, 'musician.html', {'form':form})
 
+
+def delete_musician(request, id):
+    musician = models.Musician.objects.all()
+    musician.delete()
+    return redirect('home')

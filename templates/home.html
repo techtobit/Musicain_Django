@@ -27,8 +27,8 @@
           <td>{{ album.album_release_data }}</td>
           <td>{{ album.discription }}</td>
           <td>
-            {% comment %} <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Edit</a>
-            <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a> {% endcomment %}
+            <a href="{% url 'edit_album' album.id %}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="{% url 'delete_musician' album.id %}" class="btn btn-danger btn-sm ">Delete</a>
           </td>
       </tr>
   {% endfor %}
